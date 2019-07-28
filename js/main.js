@@ -34,6 +34,14 @@ $(document).ready(function() {
  */
 
 
+$(":file").jfilestyle({
+      theme: "blue",
+      input: true,
+      inputSize: "150px",
+      text: "Upload photo"
+});
+
+
 $("#fupForm").on('submit', function(e){
   e.preventDefault();
 
@@ -48,6 +56,7 @@ $("#fupForm").on('submit', function(e){
         success: function(msg){
           console.log(msg);
           $('#fupForm')[0].reset();
+          $(":file").jfilestyle('clear');
         }
     });
   }
@@ -62,11 +71,13 @@ $("#file").change(function() {
   if(!((imagefile==match[0]) || (imagefile==match[1]) || (imagefile==match[2]) || (imagefile==match[3]) || (imagefile==match[4]) || (imagefile==match[5]) )){
       alert('Please select a valid image file (JPEG/JPG/PNG).');
       $("#file").val('');
+      $(":file").jfilestyle('clear');
       return false;
   }
   if (file.size > 500000) {
       alert("File size must under 500kb!");
       $("#file").val('');
+      $(":file").jfilestyle('clear');
       return false;
   }
 });

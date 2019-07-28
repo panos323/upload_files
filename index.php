@@ -10,6 +10,7 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>AJAX PHP</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/jquery-filestyle.css">
 </head>
 <body>
     <!--sinple ajax-->
@@ -27,8 +28,8 @@ session_start();
     <form enctype="multipart/form-data" id="fupForm" >
         <input type="text" id="first_name" name="first_name" placeholder="first name" required><br>
         <input type="text" id="last_name" name="last_name" placeholder="last name" required><br>
-        <input type="text" id="code" name="code" placeholder="code" required><br>
-        <input type="file" accept="image/*" capture="camera" id="file" name="file" required> <br>
+        <input type="text" id="code" name="code" placeholder="code" required><br><br>
+        <input type="file" accept="image/*" capture="camera" id="file" name="file" class="jfilestyle" data-theme="blue" data-input="true" data-inputSize="150px" data-text="Upload photo" required> <br>
         <input type="submit" name="submit" class="submitBtn" value="Submit"/>
     </form>
     
@@ -38,5 +39,6 @@ src="https://code.jquery.com/jquery-3.4.1.min.js"
 integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
 crossorigin="anonymous"></script>
 <script src="js/main.js"></script>
+<script src="js/jquery-filestyle.min.js"></script>
 </body>
 </html>
